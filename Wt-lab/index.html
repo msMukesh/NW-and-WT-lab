@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./bsasset/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+      body {
+        background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/245f4571-14d4-4069-90a7-259b2971229f/de03bek-134017c4-3da8-40ca-a696-2eac65721e1b.png/v1/fill/w_894,h_894,q_70,strp/macos_big_sur_wallpaper_wave_by_protheme_de03bek-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcLzI0NWY0NTcxLTE0ZDQtNDA2OS05MGE3LTI1OWIyOTcxMjI5ZlwvZGUwM2Jlay0xMzQwMTdjNC0zZGE4LTQwY2EtYTY5Ni0yZWFjNjU3MjFlMWIucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.kmtzlOQpBZk58q6u8sWNZvNZYUKpdz6AZVaGzga73kc");
+        box-sizing: border-box;
+        background-size: cover;
+        background-position: center;
+      }
+
+      * {
+        box-sizing: inherit;
+      }
+
+      main,
+      .Aboutme {
+        background: #e5d6d6;
+        background: linear-gradient(90deg, #f3d6d6 0, #d9dcf2 58%);
+        font-family: "Inter", sans-serif;
+        width: 90%;
+        max-width: 800px;
+        margin: 50px auto;
+        font-family: Calibri, Arial, sans-serif;
+        padding: 20px;
+      }
+
+      h1,
+      p {
+        text-align: center;
+      }
+      label {
+        display: block;
+        margin: 1em 0 0.2em;
+      }
+      /* single-line text, checkbox, and button */
+      input,
+      select,
+      textarea {
+        display: block;
+        width: 100%;
+        padding: 0.3em;
+        font-size: 20px;
+        background-color: #fbfbfb;
+        border: solid 1px #ccc;
+        resize: vertical;
+      }
+      textarea {
+        min-height: 180px;
+      }
+
+      input[type="submit"] {
+        background: lightcoral;
+        margin: 1em 0 0;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        transition: all 0.3s ease-out;
+      }
+
+      input:focus,
+      input:hover,
+      select:focus,
+      select:hover,
+      textarea:focus,
+      textarea:hover {
+        background: lavenderBlush;
+      }
+
+      /* hover and focus states */
+      input[type="submit"]:hover,
+      input[type="submit"]:focus {
+        background: lightgreen;
+        outline: none;
+      }
+
+      @media screen and (min-width: 600px) {
+        /*  make the form 2 columns */
+        form:after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+        .column {
+          width: 50%;
+          padding: 1em;
+          float: left;
+        }
+      }
+
+      .somedia {
+        height: 50px;
+        width: 50px;
+      }
+      .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+      }
+
+      .heroSection {
+        margin: 2em;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+      }
+
+      .heroSection > img {
+        width: 350px;
+        height: 350px;
+        /* the image is automatically cropped from center and covered */
+        object-fit: cover;
+        object-position: center;
+        border-radius: 5px;
+      }
+
+      .hsdetails > h1 {
+        text-align: center;
+      }
+
+      .hsdetails > h1 {
+        font-size: 40px;
+        margin: 10px;
+      }
+      .logo {
+        flex: right;
+      }
+
+      #expList{
+         display:flex;
+         flex-direction: column;
+         align-items: center;
+         font-size: 1.2em;
+         font-family: sans-serif;
+         list-style-type: none;
+      }
+      #expList:hover{    
+        background: #f0dddd;
+        background: linear-gradient(90deg, #f3d8d8 0, #d3d7f2 58%);
+        font-weight: 600;
+      }
+     
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-md navbar-light"
+        style="background-color: aliceblue"
+      >
+        <div class="container">
+          <div class="logo">
+            <img
+              src="srcimg/mylogo.jpeg"
+              alt="Company Logo"
+              width="70"
+              height="80"
+            />
+          </div>
+
+          <a href="/" class="navbar-brand h5"> Portfolio</a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#myNavBar"
+            aria-controls="myNavBar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="myNavBar">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item active">
+                <a href="#Aboutme" class="nav-link h5"
+                  ><strong>About me</strong></a
+                >
+              </li>
+
+              <li class="nav-item active">
+                <a href="#wtlab" class="nav-link h5"
+                  ><strong>Lab Exercise</strong></a
+                >
+              </li>
+
+              <li class="nav-item active">
+                <a href="#connform" class="nav-link h5"
+                  ><strong>Let's connect</strong></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="heroSection">
+      <!-- <img
+        class="profileImage"
+        src="https://thumbs.dreamstime.com/b/businessman-icon-vector-male-avatar-profile-image-profile-businessman-icon-vector-male-avatar-profile-image-182095609.jpgD&hl=en&sa=X&ved=2ahUKEwjlleTDptvyAhUV6HMBHXVbCNgQ4lYoAXoECAEQEg&biw=941&bih=982#imgrc=-zGj0lEDzVXFtM"
+      /> -->
+
+      <div class="hsdetails">
+        <marquee> <h1>I'm Mukesh M</h1>
+        </marquee>
+      </div>
+    </section>
+
+    <section class="Aboutme" id="Aboutme">
+      <h1>About me.</h1>
+      <p>
+        I am pursuing Msc integrated computer science at pondicherry university.
+      </p>
+    </section>
+
+    <div id="wtlab" class="Aboutme">
+
+        <h1>Web Technology Lab Exercises</h1>
+      
+        <ul id="expList">
+          <li><a href="./colourline.html">Colour Lines</a></li>
+      <li><a href=" ./countryTablePopulation.html">Country Populataion</a></li>
+          <li><a href="https://msmukesh.github.io/WTregform/">Registration Form with Validationa and DB connection</a></li>
+          <li><a href="./sixFrames.html">Six Frames</a></li>
+          <li><a href="./topLeftRightFrame.html">Two Frames</a></li>
+          <li><a href="./typesOfStyles.html">Types of Styles</a></li>
+          <li><a href="./warning.html">Blinking Warning</a></li>
+          <li><a href="./list.html">List</a></li>
+          <li><a href="./locations.html">Locations</a></li>
+          <li><a href="https://msmukesh.github.io/crowdFunding/">crowdFunding</a></li>
+        </ul>
+    </div>
+
+    <main>
+      <form
+        id="connform"
+        action="https://formsubmit.co/msmukesh2001@gmail.com"
+        method="POST"
+      >
+        <h1>Let's connect</h1>
+
+        <div class="column">
+          <label for="the-name">Your Name</label>
+          <input type="text" name="name" id="the-name" />
+
+          <label for="the-email">Email Address</label>
+          <input type="email" name="email" id="the-email" />
+
+          <label for="the-phone">Phone Number</label>
+          <input type="tel" name="phone" id="the-phone" />
+        </div>
+
+        <div class="column">
+          <label for="the-message">Message</label>
+          <textarea name="message" id="the-message"></textarea>
+        </div>
+
+        <input type="submit" value="Send Message" />
+      </form>
+    </main>
+
+    <footer class="footer">
+      <div class="footer_bg">
+        <a href="https://github.com/msMukesh">
+          <image class="somedia" src="srcimg\github.png"></image>
+        </a>
+        <a href="https://www.instagram.com/m_u_k_es_h_/"
+          ><image class="somedia" src="srcimg\instagram.png"></image
+        ></a>
+
+        <a href="https://www.linkedin.com/in/mukesh-m-9209a51b1/"
+          ><image class="somedia" src="srcimg/linkedin.png"></image
+        ></a>
+
+        <a href="https://twitter.com/Mukesh_ms_"
+          ><image class="somedia" src="srcimg\twitter.png"></image
+        ></a>
+        <a href="https://www.facebook.com/mukesh.praveen.39/">
+          <image class="somedia" src="srcimg\facebook.png"></image
+        ></a>
+      </div>
+    </footer>
+
+    <script src="./bsasset/js/jquery.min.js"></script>
+    <script src="./bsasset/js/bootstrap.min.js"></script>
+  </body>
+</html>

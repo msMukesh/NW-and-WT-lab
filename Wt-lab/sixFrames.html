@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frames using Tables</title>
+    <style>
+        .class{
+            animation: blink 1s infinite;
+
+        }
+        @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    </style>
+</head>
+<body>
+    <table align="center" cellpadding="1" cellspacing="1" width="80%">
+        <tr>
+            <td rowspan="1" colspan="8" style="background-color: #33daff;">
+                <h5>Name: MUKESH Address: Nainarmandappam, puducherry.</h5>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" style="background-color: #76ddf4;">
+                <h5>Second Frame </h5> 
+                <h5>Msc Int conputer science</h5> 
+            </td>
+            <td colspan="4" style="background-color: #76ddf4;">
+                <h5>Third frame</h5> 
+                <h6>Links to favourite sites</h6> 
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="3.5" style="background-color: #9ce8f9;">
+                <h6>Fourth frame </h6> 
+                <marquee><h6>Its December 2023</h6> 
+                </marquee>
+            </td>
+            <td colspan="3.5" style="background-color: #9ce8f9;">
+                <h5>Fifth frame</h5> 
+                <h6>            
+                    <p class="blink">This text will blink</p>
+
+                    </h6> 
+            </td>
+            <td colspan="3" style="background-color: #9ce8f9;">
+                <h5>sixth frame</h5> 
+                <h6><iframe src="/index.html" ></iframe></h6> 
+            </td>
+        </tr>
+
+    </table>
+    
+</body>
+</html>
